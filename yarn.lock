@@ -5458,6 +5458,13 @@ react-linkify@^0.2.1:
     prop-types "^15.5.8"
     tlds "^1.57.0"
 
+react-multi-toggle@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/react-multi-toggle/-/react-multi-toggle-1.1.0.tgz#0d97f5e281194c7ecaaf9f0a073ee7eecda1da4a"
+  dependencies:
+    classnames "^2.2.5"
+    prop-types "^15.6.0"
+
 react-redux@^5.0.6:
   version "5.0.6"
   resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.0.6.tgz#23ed3a4f986359d68b5212eaaa681e60d6574946"

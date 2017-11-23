@@ -11,6 +11,7 @@
     "react-dom": "^16.1.1",
     "react-dropzone": "^4.2.3",
     "react-linkify": "^0.2.1",
+    "react-multi-toggle": "^1.1.0",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "react-router-redux": "^5.0.0-alpha.8",

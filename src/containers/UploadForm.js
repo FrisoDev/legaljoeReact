@@ -7,8 +7,15 @@ import { fontLibrary } from '../styles/theme'
 import { connect } from 'react-redux'
 import UploadFile from './UploadFile'
 import { sendContract } from '../actions/contracts/'
-import Toggle from 'react-toggle'
+import Toggle from 'material-ui/Toggle';
 import './ButtonStyle.css'
+import {
+  Step,
+  Stepper,
+  StepButton,
+  StepContent,
+} from 'material-ui/Stepper'
+import FlatButton from 'material-ui/FlatButton'
 
 
 const { errorColor, alternateTextColor, textColor } = palette
@@ -91,76 +98,98 @@ class UploadForm extends PureComponent {
 
   }
 
+  state = {
+    stepIndex: 0,
+  };
+
+  handleNext = () => {
+    const {stepIndex} = this.state;
+    if (stepIndex < 2) {
+      this.setState({stepIndex: stepIndex + 1});
+    }
+  };
+
+  handlePrev = () => {
+    const {stepIndex} = this.state;
+    if (stepIndex > 0) {
+      this.setState({stepIndex: stepIndex - 1});
+    }
+  };
+
+  renderStepActions(step) {
+    return (
+      <div style={{margin: '12px 0'}}>
+        <RaisedButton
+          label="Next"
+          disableTouchRipple={true}
+          disableFocusRipple={true}
+          primary={true}
+          onClick={this.handleNext}
+          style={{marginRight: 12}}
+        />
+        {step > 0 && (
+          <FlatButton
+            label="Back"
+            disableTouchRipple={true}
+            disableFocusRipple={true}
+            onClick={this.handlePrev}
+          />
+        )}
+      </div>
+    );
+  }
+
   render() {
-    const { currentUser } = this.props
+    const {stepIndex} = this.state || 0;
 
     return (
-      <div className="formStyle">
-        <form>
-        <div className="textinput">
-          <div className="input" >
-            <TextField
-              ref="name"
-              type="text"
-              defaultValue={(currentUser === null)? "" : `${currentUser.firstName} ${currentUser.lastName}`}
-              floatingLabelText="Name"
-              style={this.props.primary ? styles.paragraph : styles.alternateParagraph}
-              floatingLabelStyle={this.props.primary ? primaryStyles.floatingLabelStyle : secondaryStyles.floatingLabelStyle}
-              underlineFocusStyle={this.props.primary ? primaryStyles.underlineFocusStyle : secondaryStyles.underlineFocusStyle}
-              inputStyle={this.props.primary ? primaryStyles.inputStyle : secondaryStyles.inputStyle}
-            />
-          </div>
-          <div className="input">
-            <TextField
-              ref="email"
-              type="email"
-              defaultValue={(currentUser === null)? "": `${currentUser.email}`}
-              hintText="Enter a valid email"
-              floatingLabelText="Email"
-              style={this.props.primary ? styles.paragraph : styles.alternateParagraph}
-              floatingLabelStyle={this.props.primary ? primaryStyles.floatingLabelStyle : secondaryStyles.floatingLabelStyle}
-              underlineFocusStyle={this.props.primary ? primaryStyles.underlineFocusStyle : secondaryStyles.underlineFocusStyle}
-              inputStyle={this.props.primary ? primaryStyles.inputStyle : secondaryStyles.inputStyle}
-            />
-          </div>
-          <div className="input">
-            <TextField
-              ref="contract"
-              type="text"
-              multiline={true}
-              rows={5}
-              hintText="Copy/Paste je contract hier"
-              floatingLabelText="Contract"
-              style={this.props.primary ? styles.paragraph : styles.alternateParagraph}
-              floatingLabelFocusStyle={this.props.primary ? primaryStyles.floatingLabelStyle : secondaryStyles.floatingLabelStyle}
-              underlineFocusStyle={this.props.primary ? primaryStyles.underlineFocusStyle : secondaryStyles.underlineFocusStyle}
-              inputStyle={this.props.primary ? primaryStyles.inputStyle : secondaryStyles.inputStyle}
-            />
-          </div>
-
-        </div>
-        <h3 style={this.props.primary ? styles.paragraph : styles.alternateParagraph}>Hoe Veel Kost Het?</h3>
-        <h5 style={this.props.primary ? styles.paragraph : styles.alternateParagraph}>Ik doe het gratis als je wilt dat ik je contract toevoeg aan mijn database. Wil je dat niet dan betaal je eenmalig EUR 39,-.</h5>
-
-          <label>
-            <Toggle
-              defaultChecked={this.state.switched}
-              onChange={this.toggleSwitch} />
-          </label>
-
-          <h3 style={this.props.primary ? styles.paragraph : styles.alternateParagraph}>{(this.state.switched)? "Je Betaalt Wel" : "Je Betaalt Niets"}</h3>
-          <UploadFile
-            ref="upFile"
-          />
-          <RaisedButton
-            label="Start Analyse"
-            onClick={this.submitForm.bind(this)}
-            primary={this.props.primary} />
-        </form>
+      <div style={{maxWidth: 380}}>
+        <Stepper
+          activeStep={stepIndex}
+          linear={false}
+          orientation="vertical"
+        >
+          <Step>
+            <StepButton onClick={() => this.setState({stepIndex: 0})}>
+              vul je email in
+            </StepButton>
+            <StepContent>
+              <p>
+              </p>
+              {this.renderStepActions(0)}
+            </StepContent>
+          </Step>
+          <Step>
+            <StepButton onClick={() => this.setState({stepIndex: 1})}>
+              kies hoe je je contract wil aanleveren
+            </StepButton>
+            <StepContent>
+              <label>
+                <Toggle
+                  label="Label on the right"
+                  labelPosition="right"
+                  defaultChecked={this.state.switched}
+                  onChange={this.toggleSwitch} />
+              </label>
+              {this.renderStepActions(1)}
+            </StepContent>
+          </Step>
+          <Step>
+            <StepButton onClick={() => this.setState({stepIndex: 2})}>
+              je contract wordt gechecked
+            </StepButton>
+            <StepContent>
+              <p>
+              </p>
+              {this.renderStepActions(2)}
+            </StepContent>
+          </Step>
+        </Stepper>
       </div>
     );
   }
 }
+
 const mapStateToProps = ({ currentUser, admin }) => {
   return {
     currentUser,

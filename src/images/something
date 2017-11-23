@@ -1,0 +1,63 @@
+// <div className="formStyle">
+//   <form>
+//   <div className="textinput">
+//     <div className="input" >
+//       <TextField
+//         ref="name"
+//         type="text"
+//         defaultValue={(currentUser === null)? "" : `${currentUser.firstName} ${currentUser.lastName}`}
+//         floatingLabelText="Name"
+//         style={this.props.primary ? styles.paragraph : styles.alternateParagraph}
+//         floatingLabelStyle={this.props.primary ? primaryStyles.floatingLabelStyle : secondaryStyles.floatingLabelStyle}
+//         underlineFocusStyle={this.props.primary ? primaryStyles.underlineFocusStyle : secondaryStyles.underlineFocusStyle}
+//         inputStyle={this.props.primary ? primaryStyles.inputStyle : secondaryStyles.inputStyle}
+//       />
+//     </div>
+//     <div className="input">
+//       <TextField
+//         ref="email"
+//         type="email"
+//         defaultValue={(currentUser === null)? "": `${currentUser.email}`}
+//         hintText="Enter a valid email"
+//         floatingLabelText="Email"
+//         style={this.props.primary ? styles.paragraph : styles.alternateParagraph}
+//         floatingLabelStyle={this.props.primary ? primaryStyles.floatingLabelStyle : secondaryStyles.floatingLabelStyle}
+//         underlineFocusStyle={this.props.primary ? primaryStyles.underlineFocusStyle : secondaryStyles.underlineFocusStyle}
+//         inputStyle={this.props.primary ? primaryStyles.inputStyle : secondaryStyles.inputStyle}
+//       />
+//     </div>
+//     <div className="input">
+//       <TextField
+//         ref="contract"
+//         type="text"
+//         multiline={true}
+//         rows={5}
+//         hintText="Copy/Paste je contract hier"
+//         floatingLabelText="Contract"
+//         style={this.props.primary ? styles.paragraph : styles.alternateParagraph}
+//         floatingLabelFocusStyle={this.props.primary ? primaryStyles.floatingLabelStyle : secondaryStyles.floatingLabelStyle}
+//         underlineFocusStyle={this.props.primary ? primaryStyles.underlineFocusStyle : secondaryStyles.underlineFocusStyle}
+//         inputStyle={this.props.primary ? primaryStyles.inputStyle : secondaryStyles.inputStyle}
+//       />
+//     </div>
+//
+//   </div>
+//   <h3 style={this.props.primary ? styles.paragraph : styles.alternateParagraph}>Hoe Veel Kost Het?</h3>
+//   <h5 style={this.props.primary ? styles.paragraph : styles.alternateParagraph}>Ik doe het gratis als je wilt dat ik je contract toevoeg aan mijn database. Wil je dat niet dan betaal je eenmalig EUR 39,-.</h5>
+//
+//     <label>
+//       <Toggle
+//         defaultChecked={this.state.switched}
+//         onChange={this.toggleSwitch} />
+//     </label>
+//
+//     <h3 style={this.props.primary ? styles.paragraph : styles.alternateParagraph}>{(this.state.switched)? "Je Betaalt Wel" : "Je Betaalt Niets"}</h3>
+//     <UploadFile
+//       ref="upFile"
+//     />
+//     <RaisedButton
+//       label="Start Analyse"
+//       onClick={this.submitForm.bind(this)}
+//       primary={this.props.primary} />
+//   </form>
+// </div>
