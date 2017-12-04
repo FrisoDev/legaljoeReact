@@ -16,7 +16,7 @@ Several packages were included to facilitate its customisability, and we make us
 The website can be visited on: http://legaljoefront.herokuapp.com
 
 <h3>Editing content</h3> 
-<li>Both sides are scrollable, the left side gives an overview of the complete website and changes are visible immediatly.</li>
+<li>Both sides are scrollable, the left side gives an overview of the complete website and changes are visible immediately.</li>
 <br>
 
 <img src="http://res.cloudinary.com/gorconsola/image/upload/v1512404296/Screen_Shot_2017-11-29_at_14.29.12_wpqhdz.png" />
@@ -24,7 +24,7 @@ The website can be visited on: http://legaljoefront.herokuapp.com
 <br>
 
 <h3>Editing colors and fonts</h3>
-<li>Both sides are scrollable, the left side gives an overview of the complete website and changes are visible immediatly.</li>
+<li>Both sides are scrollable, the left side gives an overview of the complete website and changes are visible immediately.</li>
 <br>
 
 <img src="http://res.cloudinary.com/gorconsola/image/upload/v1512404296/Screen_Shot_2017-11-29_at_14.29.36_dtyj5u.png" />
