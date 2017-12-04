@@ -2,11 +2,14 @@
 <h3>Final group assignment Codaisseur Academy</h3>
 
 Assignment: 
-Build a customizable landing page for Legal Joe which allows visitors to upload contracts for analysis by the Legal Joe AI, let them sign up so they can manage their contracts. 
+Build a customizable landing page for Legal Joe.
 
-Include an admin environment which allows users with admin rights to edit content and styling, as well as manage all contracts from users and upload analysed contracts so users can download them from their personal environment. Users are messaged through automated emails which are also editable. 
++ Which allows visitors to upload contracts for analysis by the Legal Joe AI, let them sign up so they can manage their contracts. 
++ Include an admin environment which allows users with admin rights to edit content and styling, 
++ Manage all contracts from users and upload analysed contracts so users can download them from their personal environment. 
++ Users are messaged through automated emails which are also editable. 
 
-Legal Joe React contains the frontend code of the application, which further uses a an Express API build ontop of postgresql database using sequelize ORM.
+This repository contains the frontend code of the application, which further uses a an Express API build ontop of postgresql database using sequelize ORM.
 
 Several packages were included to facilitate its customisability, and we make use of Material UI for styling and UI.
 
