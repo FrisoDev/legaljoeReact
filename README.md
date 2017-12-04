@@ -9,7 +9,7 @@ Build a customizable landing page for Legal Joe.
 + Manage all contracts from users and upload analysed contracts so users can download them from their personal environment. 
 + Users are messaged through automated emails which are also editable. 
 
-This repository contains the frontend code of the application, which further uses a an Express API build ontop of postgresql database using sequelize ORM.
+This repository contains the frontend code of the application, which further uses a an Express API build on top of a postgresql database using sequelize ORM.
 
 Several packages were included to facilitate its customisability, and we make use of Material UI for styling and UI.
 
