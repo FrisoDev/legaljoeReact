@@ -17,6 +17,7 @@ The website can be visited on: http://legaljoefront.herokuapp.com
 
 <h3>Editing content</h3> 
 <li>Both sides are scrollable, the left side gives an overview of the complete website and changes are visible immediatly.</li>
+<br>
 
 <img src="http://res.cloudinary.com/gorconsola/image/upload/v1512404296/Screen_Shot_2017-11-29_at_14.29.12_wpqhdz.png" />
 
@@ -24,6 +25,7 @@ The website can be visited on: http://legaljoefront.herokuapp.com
 
 <h3>Editing colors and fonts</h3>
 <li>Both sides are scrollable, the left side gives an overview of the complete website and changes are visible immediatly.</li>
+<br>
 
 <img src="http://res.cloudinary.com/gorconsola/image/upload/v1512404296/Screen_Shot_2017-11-29_at_14.29.36_dtyj5u.png" />
 
@@ -31,5 +33,6 @@ The website can be visited on: http://legaljoefront.herokuapp.com
 
 <h3>Contract overview</h3>
 <li>All uploaded contracts are shown, including important information. By uploading an analysed contract, the client is sent an email with the analysed contract which can also be downloaded from the personal environment.</li>
+<br>
 
 <img src="http://res.cloudinary.com/gorconsola/image/upload/v1512404295/Screen_Shot_2017-11-29_at_14.29.44_u0tm8n.png" />
