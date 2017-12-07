@@ -46,7 +46,7 @@ class UploadForm extends PureComponent {
     event.preventDefault()
     const formData = new FormData();
     var id = 0
-    if (this.props.currentUser) { id= this.props.currentUser.id}
+    if (this.props.currentUser) { id = this.props.currentUser.id}
     formData.append("file", this.refs.upFile.state.accepted[0]);
     formData.append("tags", `${this.refs.name.getValue()} , ${this.refs.email.getValue()}, ${this.state.switched},
       ${id}`);
