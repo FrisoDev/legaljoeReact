@@ -24,7 +24,7 @@ class Accept extends PureComponent {
         <div className="dropzone">
           <Dropzone
             style={styles.dropZone}
-            className={(this.state.accepted !== 0)? "hideDrop" : "dropflex"}
+            className={(this.state.accepted != 0)? "hideDrop" : "dropflex"}
             accept="application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/pdf"
             onDrop={(accepted, rejected) => { this.setState({ accepted, rejected }); }}
           >
