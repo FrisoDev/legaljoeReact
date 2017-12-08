@@ -13,7 +13,7 @@ This repository contains the frontend code of the application, which further use
 
 Several packages were included to facilitate its customisability, and we make use of Material UI for styling and UI.
 
-The website can be visited on: http://legaljoefront.herokuapp.com
+The website can be visited on: https://www.legaljoe.nl
 
 <h3>Editing content</h3> 
 <li>Both sides are scrollable, the left side gives an overview of the complete website and changes are visible immediately.</li>
