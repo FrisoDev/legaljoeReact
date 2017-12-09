@@ -15,12 +15,10 @@ class AdminUpload extends PureComponent {
     const formData = new FormData();
     formData.append("file", this.refs.upFile.state.accepted[0]);
     formData.append("tags", `${this.props.name} , ${this.props.email}, ${this.props.id}`);
-    formData.append("upload_preset", "ljanwgnh"); // Replace the preset name with your own
-    formData.append("api_key", "392573642277127"); // Replace API key with your own Cloudinary key
     formData.append("timestamp", (Date.now() / 1000) | 0);
 
-  this.props.uploadContract(formData)
-}
+    this.props.uploadContract(formData)
+  }
 
   render() {
     return (

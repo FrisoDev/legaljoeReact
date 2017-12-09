@@ -1,4 +1,4 @@
-import axios from 'axios'
+import API from '../../api/client'
 import updateContract from './update'
 import {
   APP_LOADING,
@@ -7,14 +7,14 @@ import {
   LOAD_SUCCESS
 } from '../loading'
 
-
 export const UPLOAD_CONTRACT = 'UPLOAD_CONTRACT'
+const api = new API()
 
 export default (formData) => {
   return dispatch => {
     dispatch({ type: APP_LOADING })
 
-  axios.post("https://api.cloudinary.com/v1_1/legaljoecloud/raw/upload", formData, {headers: { "X-Requested-With": "XMLHttpRequest" },})
+  api.post('/upload', formData )
     .then((result) => {
       dispatch({ type: APP_DONE_LOADING })
       dispatch({ type: LOAD_SUCCESS })
